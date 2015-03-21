@@ -27,12 +27,12 @@
             "inline": [
                 "sudo dpkg --add-architecture i386",
                 "sudo apt-get update",
-                "sudo apt-get -y install wine wine-32 lib32gcc1",
+                "sudo apt-get -y install wine wine32 lib32gcc1",
                 "mkdir ~/steamcmd",
                 "cd ~/steamcmd",
                 "wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz -O steamcmd.tar.gz",
                 "tar xvzf steamcmd.tar.gz",
-                "~/steamcmd/steamcmd.sh +@sSteamCmdForcePlatformType windows +login anonymous +force_install_dir ~/reflexfps +app_update 329740 +quit"
+                "./steamcmd.sh +@sSteamCmdForcePlatformType windows +login anonymous +force_install_dir ~/reflexfps +app_update 329740 +quit"
             ]
         }
     ]
