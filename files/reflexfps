@@ -1,0 +1,9 @@
+#!/bin/bash
+
+WINE=/usr/local/bin/wine
+REFLEX=/home/admin/reflex/reflexded.exe
+
+switch "$1"
+case "start")
+    $WINE $REFLEX
+    esac;
