@@ -1,0 +1,11 @@
+<project name="packer-reflexfps">
+    <property environment="env" />
+    <target name="build">
+        <exec failonerror="true" executable="packer">
+            <env key="AWS_ACCESS_KEY" value="${env.AWS_ACCESS_KEY}" />
+            <env key="AWS_SECRET_KEY" value="${env.AWS_SECRET_KEY}" />
+            <arg value="build" />
+            <arg value="reflexfps.json" />
+        </exec>
+    </target>
+</project>
