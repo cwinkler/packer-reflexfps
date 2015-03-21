@@ -4,13 +4,16 @@
 
     $amis = array();
 
-    if (preg_match_all('/((ap|eu|sa|us)-(central|east|northeast|southeast|west)-([0-9])):\s+(ami-([0-9a-f]+))/', $output, $matches))
+    if (preg_match_all('/((ap|eu|sa|us)-(central|east|northeast|southeast|west)-([0-9])):\s+(ami-([0-9a-f]+))/', $output, $match))
     {
-        $ami = new stdClass();
-        $ami->region = $match[1];
-        $ami->id = $match[5];
+        foreach ($match[0] as $index => $m)
+        {
+            $ami = new stdClass();
+            $ami->region = $match[1][$index];
+            $ami->id = $match[5][$index];
 
-        $amis[] = $ami;
+            $amis[] = $ami;
+        }
     }
 
     file_put_contents("html/amis.json", json_encode($amis));
