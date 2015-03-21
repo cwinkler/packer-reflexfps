@@ -10,7 +10,7 @@
             "access_key": "{{user `aws_access_key`}}",
             "secret_key": "{{user `aws_secret_key`}}",
             "ami_name": "reflexfps-{{user `build_number`}}",
-            "instance_type": "t2.micro",
+            "instance_type": "m3.medium",
             "region": "eu-west-1",
             "source_ami": "ami-9440fbe3",
             "ssh_username": "admin",
