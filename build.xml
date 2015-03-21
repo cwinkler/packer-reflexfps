@@ -4,10 +4,11 @@
     </target>
     <target name="build" depends="clean">
         <exec failonerror="true" executable="packer">
-            <redirector output="packer.log" alwayslog="true" /> 
+            <redirector output="packer.log" alwayslog="true" />
             <env key="AWS_ACCESS_KEY" value="${AWS_ACCESS_KEY}" />
             <env key="AWS_SECRET_KEY" value="${AWS_SECRET_KEY}" />
             <arg value="build" />
+            <arg value="-machine-readable" />
             <arg value="reflexfps.json" />
         </exec>
     </target>
