@@ -1,4 +1,5 @@
 <project name="packer-reflexfps">
+    <property environment="env" />
     <target name="clean">
         <delete file="packer.log" />
     </target>
@@ -21,12 +22,26 @@
         <exec failonerror="true" executable="aws">
             <env key="AWS_ACCESS_KEY_ID" value="${AWS_ACCESS_KEY}" />
             <env key="AWS_SECRET_ACCESS_KEY" value="${AWS_SECRET_KEY}" />
-            <arg value="--region" />
-            <arg value="eu-central-1" />
             <arg value="s3" />
             <arg value="cp" />
-            <arg value="html/*" />
+            <arg value="--region" />
+            <arg value="eu-central-1" />
+            <arg value="--recursive" />
+            <arg value="html/" />
             <arg value="s3://reflexfps-ami/" />
+        </exec>
+    </target>
+
+    <target name="copy-image">
+        <exec failonerror="true" executable="aws">
+            <env key="AWS_ACCESS_KEY_ID" value="${AWS_ACCESS_KEY}" />
+            <env key="AWS_SECRET_ACCESS_KEY" value="${AWS_SECRET_KEY}" />
+            <arg value="ec2" />
+            <arg value="copy-image" />
+            <arg value="--source-region=${source_region}" />
+            <arg value="--source-ami-id=${source_ami}" />
+            <arg value="--name=reflexfps-${env.BUILD_NUMBER}" />
+            <arg value="--region=${target_region}" />
         </exec>
     </target>
 
