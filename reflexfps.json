@@ -32,7 +32,7 @@
                 "cd ~/steamcmd",
                 "wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz -O steamcmd.tar.gz",
                 "tar xvzf steamcmd.tar.gz",
-                "./steamcmd.sh +@sSteamCmdForcePlatformType windows +login anonymous +force_install_dir ~/reflexfps +app_update 329740 +quit"
+                "./steamcmd.sh +@sSteamCmdForcePlatformType windows +login anonymous +force_install_dir ./reflexfps +app_update 329740 +quit"
             ]
         }
     ]
