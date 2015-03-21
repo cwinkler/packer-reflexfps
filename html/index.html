@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="reflexfps">
+    <head>
+        <title>ReflexFPS AMI IDs</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script src="/list.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h1 class="panel-title">ReflexFPS AMI IDs</h1>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th width="50%">AWS Region</th>
+                                <th width="50%">AMI ID</th>
+                            </tr>
+                        </thead>
+                        <tbody ng-controller="ListController">
+                            <tr ng-repeat="ami in amis">
+                                <td>{{ami.region}}</td>
+                                <td><a href="https://console.aws.amazon.com/ec2/home?region={{ami.region}}#launchAmi={{ami.id}}">{{ami.id}}</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

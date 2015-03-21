@@ -1,0 +1,10 @@
+[
+    {
+        "region": "eu-central-1",
+        "id": "ami-12345678"
+    },
+    {
+        "region": "eu-west-1",
+        "id": "ami-f131af86"
+    }
+]
