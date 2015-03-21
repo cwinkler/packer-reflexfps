@@ -1,9 +1,18 @@
-#!/bin/bash
+#! /bin/sh
 
-WINE=/usr/local/bin/wine
-REFLEX=/home/admin/reflex/reflexded.exe
+case "$1" in
+  start)
+        start-stop-daemon --start --pidfile /var/run/reflexfps.pid -m -c admin -b --exec /usr/bin/wine /home/admin/steamcmd/reflexfps/reflexded.exe
+    ;;
+  stop)
+    ;;
 
-switch "$1"
-case "start")
-    $WINE $REFLEX
-    esac;
+  restart)
+    ;;
+
+  *)
+    echo "Usage: /etc/init.d/reflexfps {start|stop|restart}"
+    exit 1
+esac
+
+exit 0
