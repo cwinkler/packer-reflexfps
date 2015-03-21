@@ -2,7 +2,7 @@
 
 case "$1" in
   start)
-        start-stop-daemon --start --pidfile /var/run/reflexfps.pid -m -c admin -b --exec /usr/bin/wine /home/admin/steamcmd/reflexfps/reflexded.exe
+        start-stop-daemon --start --pidfile /var/run/reflexfps.pid -m -c admin -b -d /home/admin/steamcmd/reflexfps --exec /usr/bin/wine reflexded.exe
     ;;
   stop)
     ;;
