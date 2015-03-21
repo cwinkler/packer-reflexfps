@@ -36,7 +36,7 @@
                 "wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz -O steamcmd.tar.gz",
                 "tar xvzf steamcmd.tar.gz",
                 "./steamcmd.sh +@sSteamCmdForcePlatformType windows +login anonymous +force_install_dir ./reflexfps +app_update 329740 +quit",
-                "cp /tmp/decicatedserver.cfg /home/admin/steamcmd/reflexfps/dedicatedserver.cfg",
+                "cp /tmp/dedicatedserver.cfg /home/admin/steamcmd/reflexfps/dedicatedserver.cfg",
                 "sudo cp /tmp/reflexfps /etc/init.d/reflexfps",
                 "sudo chmod 0755 /etc/init.d/reflexfps",
                 "sudo ln -s /etc/init.d/reflexfps /etc/rc5.d/S99reflexfps"
