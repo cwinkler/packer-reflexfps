@@ -11,7 +11,13 @@
             <arg value="reflexfps.json" />
         </exec>
     </target>
-    <target name="publish-html">
+    <target name="analyze-log">
+        <exec failonerror="true" executable="php">
+            <arg value="-f" />
+            <arg value="parse-output.php" />
+        </exec>
+    </target>
+    <target name="publish-html" depends="analyze-log">
         <exec failonerror="true" executable="aws">
             <env key="AWS_ACCESS_KEY_ID" value="${AWS_ACCESS_KEY}" />
             <env key="AWS_SECRET_ACCESS_KEY" value="${AWS_SECRET_KEY}" />
@@ -23,4 +29,6 @@
             <arg value="s3://reflexfps-ami/" />
         </exec>
     </target>
+
+    <target name="publish" depends="build,publish-html" />
 </project>
