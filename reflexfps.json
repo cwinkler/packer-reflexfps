@@ -15,7 +15,7 @@
             "source_ami": "ami-9440fbe3",
             "ssh_username": "admin",
             "ami_regions": [
-                "eu-central-1"
+                "us-west-1"
             ]
         }
     ],
