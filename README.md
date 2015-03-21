@@ -4,7 +4,7 @@ This is a Packer Template for a dedicated ReflexFPS Server based on Debian 8.0 (
 ## Configuration
 Right now you have to manually SSH into your running Instance and change the configuration files manually.
 
-The server config is located at `/home/admin/reflexfps/serverconfig.cfg`.
+The server config is located at `/home/admin/steamcmd/reflexfps/dedicatedserver.cfg `.
 
 ## Start / Stop / Restart
 
