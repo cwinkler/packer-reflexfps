@@ -13,7 +13,10 @@
             "instance_type": "t2.micro",
             "region": "eu-west-1",
             "source_ami": "ami-9440fbe3",
-            "ssh_username": "admin"
+            "ssh_username": "admin",
+            "ami_regions": [
+                "eu-central-1"
+            ]
         }
     ],
     "provisioners": [
