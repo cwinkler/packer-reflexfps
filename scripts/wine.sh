@@ -3,7 +3,7 @@
 set -e
 
 # install dependencies
-apt-get -y install build-essential git
+apt-get -y install build-essential git autoconf
 
 # install flex
 git clone git://git.code.sf.net/p/flex/flex /tmp/flex && cd /tmp/flex
