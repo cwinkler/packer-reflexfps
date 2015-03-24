@@ -11,7 +11,8 @@ cd /var/steam
 
 cp /tmp/dedicatedserver.cfg /var/reflex/dedicatedserver.cfg
 
-
 cp /tmp/reflexfps /etc/init.d/reflexfps
 chmod 0755 /etc/init.d/reflexfps
 ln -s /etc/init.d/reflexfps /etc/rc5.d/S99reflexfps
+
+chown -R reflex:reflex /var/reflex
