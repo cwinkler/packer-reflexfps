@@ -1,5 +1,13 @@
-#git clone git://source.winehq.org/git/wine.git /tmp/wine
+#!/bin/bash
 
-#cd /tmp/wine
+set -e
 
-#./configure --without-x --enable-win64
+apt-get -y install build-essential git
+
+git clone git://source.winehq.org/git/wine.git /tmp/wine
+
+cd /tmp/wine
+
+./configure --without-x --enable-win64
+make
+make install
