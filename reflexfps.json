@@ -13,7 +13,7 @@
             "instance_type": "m3.medium",
             "region": "eu-west-1",
             "source_ami": "ami-5f9e1028",
-            "ssh_username": "admin",
+            "ssh_username": "ubuntu",
             "ami_groups": ["all"]
         }
     ],
