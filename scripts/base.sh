@@ -1,5 +1,8 @@
-cat /etc/apt/sources.list
+#!/bin/bash
+
+set -e
+
 apt-get update
 apt-get -y upgrade
-cat /etc/apt/sources.list
-#apt-get -y install build-essential git
+
+apt-get -y install build-essential git vim curl

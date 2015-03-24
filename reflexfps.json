@@ -30,10 +30,6 @@
                 "scripts/base.sh",
                 "scripts/wine.sh"
             ]
-        },
-        {
-            "type": "shell",
-            "inline": "sudo apt-get -y install build-essential"
         }
     ]
 }
