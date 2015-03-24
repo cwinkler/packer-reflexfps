@@ -9,7 +9,9 @@ apt-get -y install build-essential git
 git clone git://git.code.sf.net/p/flex/flex /tmp/flex && cd /tmp/flex
 git checkout tags/flex-2.5.39
 
-./configure
+./autogen.sh
+
+ls -alh
 
 make && make install
 
