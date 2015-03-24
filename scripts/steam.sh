@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e
+
 apt-get -y install lib32gcc1
 
 groupadd --gid 2000 steam
