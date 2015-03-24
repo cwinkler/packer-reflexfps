@@ -12,7 +12,7 @@
             "ami_name": "reflexfps-{{user `build_number`}}",
             "instance_type": "m3.medium",
             "region": "eu-west-1",
-            "source_ami": "ami-5f9e1028",
+            "source_ami": "ami-edfd6e9a",
             "ssh_username": "ubuntu",
             "ami_groups": ["all"]
         }
