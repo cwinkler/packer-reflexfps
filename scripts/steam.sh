@@ -1,3 +1,5 @@
+apt-get -y install lib32gcc1
+
 groupadd --gid 2000 steam
 useradd --gid 2000 --uid 2000 -m steam
 
