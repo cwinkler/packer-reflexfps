@@ -3,22 +3,22 @@
 set -e
 
 # install dependencies
-apt-get -y install build-essential git autoconf wine1.7
+apt-get -y install build-essential git autoconf wine1.6
 
 # install flex
-git clone git://git.code.sf.net/p/flex/flex /tmp/flex && cd /tmp/flex
-git checkout tags/flex-2.5.39
+#git clone git://git.code.sf.net/p/flex/flex /tmp/flex && cd /tmp/flex
+#git checkout tags/flex-2.5.39
 
-./autogen.sh
+#./autogen.sh
 
-ls -alh
+#ls -alh
 
-make && make install
+#make && make install
 
 # install wine
-git clone git://source.winehq.org/git/wine.git /tmp/wine && cd /tmp/wine
-git checkout tags/wine-1.6.2
+#git clone git://source.winehq.org/git/wine.git /tmp/wine && cd /tmp/wine
+#git checkout tags/wine-1.6.2
 
-./configure --without-x --enable-win64
+#./configure --without-x --enable-win64
 
-make && make install
+#make && make install
