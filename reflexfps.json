@@ -25,7 +25,7 @@
         },
         {
             "type": "shell",
-            "execute_command": "sudo -S sh '{{.Path}}",
+            "execute_command": "sudo -S sh '{{.Path}}'",
             "scripts": [
                 "scripts/base.sh"
             ]
