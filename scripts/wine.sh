@@ -3,7 +3,7 @@
 set -e
 
 # install dependencies
-apt-get -y install build-essential git autoconf
+apt-get -y install build-essential git autoconf wine1.7
 
 # install flex
 git clone git://git.code.sf.net/p/flex/flex /tmp/flex && cd /tmp/flex
