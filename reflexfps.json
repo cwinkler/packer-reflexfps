@@ -28,7 +28,9 @@
             "execute_command": "sudo -S sh '{{.Path}}'",
             "scripts": [
                 "scripts/base.sh",
-                "scripts/wine.sh"
+                "scripts/wine.sh",
+                "scripts/steam.sh",
+                "scripts/reflex.sh"
             ]
         }
     ]
