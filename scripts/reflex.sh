@@ -7,8 +7,7 @@ useradd --gid 3000 --uid 3000 -m reflex
 
 cd /var/steam
 
-#./steamcmd.sh +@sSteamCmdForcePlatformType windows +login anonymous +force_install_dir /var/reflex +app_update 329740 +quit
-./steamcmd.sh +@sSteamCmdForcePlatformType windows +login anonymous +app_update 329740 +quit
+./steamcmd.sh +@sSteamCmdForcePlatformType windows +login anonymous +force_install_dir /var/reflex +app_update 329740 validate +quit
 
 apt-get install tree
 
