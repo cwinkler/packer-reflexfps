@@ -3,7 +3,7 @@
 set -e
 
 groupadd --gid 3000 reflex
-useradd --gid 3000 --uid 2000 -m reflex
+useradd --gid 3000 --uid 3000 -m reflex
 
 cd /var/steam
 
