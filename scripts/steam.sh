@@ -5,12 +5,8 @@ set -e
 apt-get -y install lib32gcc1
 
 groupadd --gid 2000 steam
-useradd --gid 2000 --uid 2000 -m steam
+useradd --gid 2000 --uid 2000 -d /var/steam -m steam
 
-mkdir -p /var/steam
-cd /var/steam
-
-wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz -O steamcmd.tar.gz
-tar xvzf steamcmd.tar.gz
-
-chown -R steam:steam /var/steam
+su --login steam --shell /bin/bash --command "wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz -O /tmp/steamcmd.tar.gz"
+su --login steam --shell /bin/bash --command "mkdir -p /var/steam/steamcmd"
+su --login steam --shell /bin/bash --command "tar xvzf /tmp/steamcmd.tar.gz -C /var/steam/steamcmd"
